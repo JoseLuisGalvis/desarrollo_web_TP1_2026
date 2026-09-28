@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>
+    (function () {
+      var temaGuardado = localStorage.getItem('team-two-theme');
+      var tema = (temaGuardado === 'dark') ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', tema);
+    })();
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>José — Team Two</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="index.html" class="brand"><img class="brand-logo" src="img/logo-t2.png" alt="Logo Team Two" />Team <span>Two</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="jose.html" class="active">José</a></li>
+        <li><a href="bitacora.html">Bitácora</a></li>
+      </ul>
+      </div>
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-switch" type="button" role="switch" aria-checked="false" aria-label="Cambiar entre modo claro y oscuro">
+          <svg class="track-icon icon-sun-track" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="track-icon icon-moon-track" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span class="switch-knob" aria-hidden="true"></span>
+        </button>
+        <button id="nav-toggle" class="hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="nav-buttons">
+      <a href="index.html" class="btn">← Volver al inicio</a>
+      <a href="bitacora.html" class="btn">Ir a la bitácora</a>
+    </div>
+
+    <div class="profile-layout">
+
+      <button
+        class="flip-card"
+        data-facts='["Aprendió a programar mirando tutoriales a la 1 de la mañana.","Tiene más pestañas del navegador abiertas que amigos en el celular.","Una vez debuggeó un error que era solo un punto y coma faltante… durante 40 minutos.","Prefiere el modo oscuro incluso para leer el sol."]'
+      >
+        <div class="flip-card-inner">
+          <div class="flip-face flip-face-front">
+            <img src="img/jose-luis.jpg" alt="Foto de José Luis Galvis" />
+            <strong>José</strong>
+            <span class="hint">Tocá para ver un dato random</span>
+          </div>
+          <div class="flip-face flip-face-back">
+            <p class="label">¿Sabías que…?</p>
+            <p id="random-fact">Tocá la tarjeta para descubrirlo.</p>
+          </div>
+        </div>
+      </button>
+
+      <div class="profile-info">
+        <h1 class="reveal">José</h1>
+        <div class="profile-meta">
+          <span>📍 CABA, Argentina</span>
+          <span>🎂 60 años</span>
+          <span>💻 Front end &amp; testing</span>
+        </div>
+        <p>
+          Estudiante de Desarrollo de Sistemas Web en el IFTS N°29. Le gusta
+          entender bien cómo funcionan las cosas antes de darlas por terminadas,
+          así que en este equipo se ocupó de la estructura general del sitio y
+          de que las interacciones en JavaScript anduvieran prolijas.
+        </p>
+
+        <div class="stat-block reveal">
+          <h2>Habilidades</h2>
+          <div class="skill-row">
+            <span>HTML &amp; CSS</span>
+            <div class="skill-bar"><div class="skill-bar-fill" data-level="85"></div></div>
+          </div>
+          <div class="skill-row">
+            <span>JavaScript</span>
+            <div class="skill-bar"><div class="skill-bar-fill" data-level="75"></div></div>
+          </div>
+          <div class="skill-row">
+            <span>Testing</span>
+            <div class="skill-bar"><div class="skill-bar-fill" data-level="70"></div></div>
+          </div>
+          <div class="skill-row">
+            <span>Redes</span>
+            <div class="skill-bar"><div class="skill-bar-fill" data-level="60"></div></div>
+          </div>
+        </div>
+
+        <div class="stat-block reveal">
+          <h2>Películas favoritas</h2>
+          <div class="media-carousel">
+            <button class="media-nav media-nav-prev" type="button" aria-label="Ver películas anteriores">‹</button>
+            <div class="media-track" role="list">
+              <div class="media-card" role="listitem">
+                <div class="media-card-inner g1">
+                  <span class="media-icon">🎬</span>
+                  <span class="media-tag">Película</span>
+                  <span class="media-title">Rocky IV</span>
+                </div>
+              </div>
+              <div class="media-card" role="listitem">
+                <div class="media-card-inner g2">
+                  <span class="media-icon">🎬</span>
+                  <span class="media-tag">Película</span>
+                  <span class="media-title">Guardianes de Altamar</span>
+                </div>
+              </div>
+              <div class="media-card" role="listitem">
+                <div class="media-card-inner g3">
+                  <span class="media-icon">🎬</span>
+                  <span class="media-tag">Película</span>
+                  <span class="media-title">Hombres de Honor</span>
+                </div>
+              </div>
+            </div>
+            <button class="media-nav media-nav-next" type="button" aria-label="Ver más películas">›</button>
+          </div>
+        </div>
+
+        <div class="stat-block reveal">
+          <h2>Discos favoritos</h2>
+          <div class="media-carousel">
+            <button class="media-nav media-nav-prev" type="button" aria-label="Ver discos anteriores">‹</button>
+            <div class="media-track" role="list">
+              <div class="media-card" role="listitem">
+                <div class="media-card-inner g4">
+                  <span class="media-icon">💿</span>
+                  <span class="media-tag">Disco</span>
+                  <span class="media-title">Fantasmas (1981)</span>
+                </div>
+              </div>
+              <div class="media-card" role="listitem">
+                <div class="media-card-inner g5">
+                  <span class="media-icon">💿</span>
+                  <span class="media-tag">Disco</span>
+                  <span class="media-title">Thriller (1982)</span>
+                </div>
+              </div>
+              <div class="media-card" role="listitem">
+                <div class="media-card-inner g6">
+                  <span class="media-icon">💿</span>
+                  <span class="media-tag">Disco</span>
+                  <span class="media-title">Eye of the Tiger (1982)</span>
+                </div>
+              </div>
+            </div>
+            <button class="media-nav media-nav-next" type="button" aria-label="Ver más discos">›</button>
+          </div>
+        </div>
+
+        <div class="nav-buttons">
+          <a class="btn btn-primary" href="https://dev-portfolio-2025.vercel.app/" target="_blank" rel="noopener">Ver mi portafolio</a>
+          <a class="btn" href="https://github.com/JoseLuisGalvis" target="_blank" rel="noopener">Ver perfil de GitHub</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Team Two — TP1, Desarrollo de Sistemas Web (Front End), IFTS N°29.</p>
+    </div>
+  </footer>
+
+  <script src="js/reveal.js"></script>
+  <script src="js/perfil.js"></script>
+  <script src="js/media-carousel.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

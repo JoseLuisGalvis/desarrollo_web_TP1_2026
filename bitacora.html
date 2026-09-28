@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>
+    (function () {
+      var temaGuardado = localStorage.getItem('team-two-theme');
+      var tema = (temaGuardado === 'dark') ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', tema);
+    })();
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bitácora — Team Two</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="index.html" class="brand"><img class="brand-logo" src="img/logo-t2.png" alt="Logo Team Two" />Team <span>Two</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="jose.html">José</a></li>
+        <li><a href="bitacora.html" class="active">Bitácora</a></li>
+      </ul>
+      </div>
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-switch" type="button" role="switch" aria-checked="false" aria-label="Cambiar entre modo claro y oscuro">
+          <svg class="track-icon icon-sun-track" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg class="track-icon icon-moon-track" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span class="switch-knob" aria-hidden="true"></span>
+        </button>
+        <button id="nav-toggle" class="hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom: 1rem;">
+      <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="container">
+        <h1 class="reveal">Bitácora de trabajo</h1>
+        <p class="lead reveal">
+          Acá registramos cómo fuimos avanzando con el TP1: decisiones que
+          tomamos, problemas que se nos aparecieron y cómo los resolvimos.
+          
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+      <div class="nav-buttons" style="margin:0 0 2rem;">
+        <a href="index.html" class="btn">← Volver al inicio</a>
+        <a href="jose.html" class="btn">Ver perfil de José</a>
+      </div>
+      <div class="log-entry reveal">
+        <p class="log-date">Etapa 1</p>
+        <h3>Organización del equipo</h3>
+        <p>Armamos el repositorio público en GitHub (JoseLuisGalvis/desarrollo_web_TP1_2026), definimos roles y la forma de comunicación del equipo.</p>
+      </div>
+
+      <div class="log-entry reveal">
+        <p class="log-date">Etapa 2</p>
+        <h3>Estructura del sitio</h3>
+        <p>Decidimos la organización de carpetas (css, js, img) y optamos por avatares en lugar de fotos para cuidar la privacidad.</p>
+      </div>
+
+      <div class="log-entry reveal">
+        <p class="log-date">Etapa 3</p>
+        <h3>Dificultad: interacciones en JavaScript</h3>
+        <p>Ajustamos el flip 3D de la tarjeta de perfil y el fondo animado del hero, cuidando que funcionen con teclado y respeten prefers-reduced-motion.</p>
+      </div>
+
+      <div class="log-entry reveal">
+        <p class="log-date">Etapa 4</p>
+        <h3>Responsive y publicación</h3>
+        <p>Probamos los breakpoints de 400px, 900px y 1200px sin desbordes y publicamos en Vercel.</p>
+      </div>
+
+      <div class="log-entry reveal">
+        <p class="log-date">28/09/2026</p>
+        <h3>Retomamos el proyecto: cambios</h3>
+        <p>Dificultad principal: el equipo quedó reducido a una sola persona, por lo que se dejó una única tarjeta de integrante y se eliminaron los perfiles de ejemplo. Nueva paleta: modo light con fondo #000050 y modo dark con fondo negro #000000, títulos en naranja y resto en blanco, más tres colores de apoyo (azul cielo, dorado y cian). Nueva tipografía: Lato. Se definieron las películas (Rocky IV, Guardianes de Altamar) y los discos (Fantasmas 1981, Thriller 1982, Eye of the Tiger 1982). Se agregaron botones de navegación en todas las páginas y se actualizó el README.</p>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Team Two — TP1, Desarrollo de Sistemas Web (Front End), IFTS N°29.</p>
+    </div>
+  </footer>
+
+  <script src="js/hero-bg.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>
