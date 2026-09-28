@@ -112,7 +112,7 @@ Se verificó con una prueba automática que no hay desborde horizontal en ningun
 ## Publicación
 
 - **Repositorio:** https://github.com/JoseLuisGalvis/desarrollo_web_TP1_2026
-- **Sitio en Vercel:** [completar con la URL de Vercel]
+- **Sitio en Vercel:** https://desarrollo-web-tp-1-2026.vercel.app
 
 ## Evolución
 
